@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Spring Boot Starter Web for RESTful APIs
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Spring Boot Starter Data MongoDB for MongoDB integration
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+	// Spring Boot Starter Test for testing support
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Lombok for simplified Java code
+	implementation 'org.projectlombok:lombok:1.18.22'
+
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.1'
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
+
